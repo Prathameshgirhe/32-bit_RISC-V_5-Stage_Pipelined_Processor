@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner (3).svg" alt="RISC-V 5-Stage Pipelined Processor" width="100%"/>
+<img src="docs/images/rv32-header-banner.svg" alt="RISC-V 5-Stage Pipelined Processor" width="100%"/>
 
 <a href="https://github.com/Prathameshgirhe/repo-name">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=760&lines=32-bit+RV32I+Core+in+Verilog+HDL;5-Stage+Pipeline%3A+IF+%E2%86%92+ID+%E2%86%92+EX+%E2%86%92+MEM+%E2%86%92+WB;Forwarding+Unit+%2B+Hazard+Detection;28%25+Fewer+Stalls+vs.+No-Forwarding+Baseline" alt="Typing animation"/>
@@ -19,7 +19,7 @@
 
 </div>
 
-<img src="assets/divider.svg" width="100%"/>
+<img src="docs/images/rv32-wave-divider.svg" width="100%"/>
 
 ## 🚀 Overview
 
@@ -34,12 +34,12 @@ A **32-bit, 5-stage pipelined RISC-V (RV32I) processor** written in **Verilog RT
 | **Tools** | Verilog HDL, QuestaSim / Vivado Simulator, Xilinx Vivado |
 | **Result** | ~28% fewer pipeline stalls vs. no-forwarding baseline |
 
-<img src="assets/divider.svg" width="100%"/>
+<img src="docs/images/rv32-wave-divider.svg" width="100%"/>
 
 ## 🧠 Pipeline Architecture
 
 <div align="center">
-  <img src="assets/pipeline.svg" alt="Animated 5-stage pipelined datapath" width="100%"/>
+  <img src="docs/images/rv32-datapath-animated.svg" alt="Animated 5-stage pipelined datapath" width="100%"/>
 </div>
 
 <br/>
@@ -64,7 +64,7 @@ A **32-bit, 5-stage pipelined RISC-V (RV32I) processor** written in **Verilog RT
 
 </details>
 
-<img src="assets/divider.svg" width="100%"/>
+<img src="docs/images/rv32-wave-divider.svg" width="100%"/>
 
 ## ⚡ Hazard Handling
 
@@ -73,7 +73,7 @@ A **32-bit, 5-stage pipelined RISC-V (RV32I) processor** written in **Verilog RT
 When a result is needed before it is written back, the forwarding unit routes it straight into the ALU inputs.
 
 <div align="center">
-  <img src="assets/forwarding.svg" alt="Animated forwarding unit" width="100%"/>
+  <img src="docs/images/rv32-forwarding-unit.svg" alt="Animated forwarding unit" width="100%"/>
 </div>
 
 ### 2️⃣ Load-use hazard (stall)
@@ -81,7 +81,7 @@ When a result is needed before it is written back, the forwarding unit routes it
 A load's data is only ready after MEM, so one dependent instruction must wait one cycle. The hazard unit freezes the PC and `IF/ID`, inserts a bubble into `ID/EX`, and forwarding handles the rest.
 
 <div align="center">
-  <img src="assets/hazard-timing.svg" alt="Animated load-use hazard timing diagram" width="100%"/>
+  <img src="docs/images/rv32-hazard-timing.svg" alt="Animated load-use hazard timing diagram" width="100%"/>
 </div>
 
 ```mermaid
@@ -116,29 +116,29 @@ if (ID_EX_MemRead && (ID_EX_rd == IF_ID_rs1 || ID_EX_rd == IF_ID_rs2))
 
 </details>
 
-<img src="assets/divider.svg" width="100%"/>
+<img src="docs/images/rv32-wave-divider.svg" width="100%"/>
 
 ## 🧪 Verification Flow
 
 <div align="center">
-  <img src="assets/flow.svg" alt="Animated verification flow" width="100%"/>
+  <img src="docs/images/rv32-verify-flow.svg" alt="Animated verification flow" width="100%"/>
 </div>
 
 - ✅ **20+ directed instruction sequences** (ALU, load/store, branches, back-to-back dependencies)
 - ✅ **100+ simulation scenarios** in QuestaSim / Vivado Simulator
 - ✅ Waveform inspection of forwarding paths and stall/bubble behavior
 
-<img src="assets/divider.svg" width="100%"/>
+<img src="docs/images/rv32-wave-divider.svg" width="100%"/>
 
 ## 📊 Results
 
 <div align="center">
-  <img src="assets/stats.svg" alt="Animated results dashboard" width="100%"/>
+  <img src="docs/images/rv32-results-dashboard.svg" alt="Animated results dashboard" width="100%"/>
 </div>
 
 > 📝 **Note:** Numbers above are target ranges. Update them with your final measured values from the simulation logs and the Vivado utilization / timing reports.
 
-<img src="assets/divider.svg" width="100%"/>
+<img src="docs/images/rv32-wave-divider.svg" width="100%"/>
 
 ## 📁 Repository Structure
 
@@ -163,7 +163,7 @@ if (ID_EX_MemRead && (ID_EX_rd == IF_ID_rs1 || ID_EX_rd == IF_ID_rs2))
 ├── scripts/
 │   ├── run_sim.do            # QuestaSim script
 │   └── synth.tcl             # Vivado synthesis script
-├── assets/                   # README images (SVG)
+├── docs/images/                   # README images (SVG)
 └── README.md
 ```
 
@@ -233,7 +233,7 @@ Issues and pull requests are welcome. Fork the repo, create a feature branch, an
 
 <div align="center">
 
-<img src="assets/divider.svg" width="100%"/>
+<img src="docs/images/rv32-wave-divider.svg" width="100%"/>
 
 ⭐ **If this project helped you, drop a star!** ⭐
 
