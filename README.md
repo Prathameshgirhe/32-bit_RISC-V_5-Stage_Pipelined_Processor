@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="RISC-V 5-Stage Pipelined Processor" width="100%"/>
+<img src="assets/banner (3).svg" alt="RISC-V 5-Stage Pipelined Processor" width="100%"/>
 
 <a href="https://github.com/Prathameshgirhe/repo-name">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=760&lines=32-bit+RV32I+Core+in+Verilog+HDL;5-Stage+Pipeline%3A+IF+%E2%86%92+ID+%E2%86%92+EX+%E2%86%92+MEM+%E2%86%92+WB;Forwarding+Unit+%2B+Hazard+Detection;28%25+Fewer+Stalls+vs.+No-Forwarding+Baseline" alt="Typing animation"/>
